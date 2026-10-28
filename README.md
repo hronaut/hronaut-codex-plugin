@@ -1,1 +1,39 @@
-# hronaut-codex-plugin
+# Hronaut for Codex
+
+The Codex plugin for [Hronaut](https://hronaut.dev), a visible desktop browser your coding agent drives over MCP. It
+adds Hronaut's MCP server and the Hronaut skill to Codex CLI and Codex in the ChatGPT desktop app. Start Hronaut, then:
+
+```bash
+codex plugin marketplace add hronaut/hronaut-codex-plugin
+codex plugin add hronaut@hronaut
+```
+
+Or, after adding the marketplace, install **Hronaut** from `/plugins` in Codex CLI or from **Plugins** in the ChatGPT
+desktop app. What the plugin does and how it connects: [plugins/hronaut/README.md](plugins/hronaut/README.md). The
+Claude Code plugin is in [hronaut/hronaut-claude-plugin](https://github.com/hronaut/hronaut-claude-plugin), and
+Hronaut itself in [hronaut/hronaut](https://github.com/hronaut/hronaut); report problems
+[there](https://github.com/hronaut/hronaut/issues).
+
+## Repository layout
+
+- `.agents/plugins/marketplace.json`: the marketplace `codex plugin marketplace add` reads, with one plugin.
+- `plugins/hronaut/`: the plugin, exactly as Codex installs it.
+- `tests/`: checks of the marketplace, the manifest and the headers helper on Linux, macOS and Windows, and an
+  end-to-end test that installs the plugin with the Codex CLI, when it is installed.
+- `.github/workflows/sync.yml`: once a day copies the Hronaut skill and license from the newest Hronaut release into
+  the plugin, and releases a new patch version when they changed.
+
+## Development
+
+```bash
+npm ci
+npm install --no-save @openai/codex@0.165.0   # for the end-to-end test
+npm test
+```
+
+Every change users should get bumps `version` in `plugins/hronaut/.codex-plugin/plugin.json` and adds a
+[CHANGELOG](CHANGELOG.md) entry with that version. See [AGENTS.md](AGENTS.md) for how the headers helper works.
+
+## License
+
+Source-available under the [Hronaut Subscription and Trial License](LICENSE).
