@@ -1,0 +1,36 @@
+{
+  "name": "hronaut",
+  "version": "1.0.1",
+  "description": "Connects your coding agent to Hronaut — a visible desktop browser it can drive over MCP. Watch every step, pause and take over, keep logins between sessions. Requires the Hronaut app (free 10-day trial at hronaut.dev).",
+  "author": {
+    "name": "Hronaut",
+    "url": "https://hronaut.dev"
+  },
+  "homepage": "https://hronaut.dev/codex-browser-mcp",
+  "repository": "https://github.com/hronaut/hronaut-codex-plugin",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": ["browser", "mcp", "qa", "testing", "automation", "localhost"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Hronaut",
+    "shortDescription": "A browser your agent drives",
+    "longDescription": "Hronaut is a visible desktop browser that runs as its own app on your computer. This plugin connects Codex to Hronaut's local MCP server and adds the Hronaut skill, which teaches Codex to work in its own isolated workspace and hand sign-ins and CAPTCHAs to you. Codex opens tabs, reads pages, clicks and types, takes screenshots, inspects console and network traffic, and runs accessibility and performance audits while you watch, pause and take over. Tabs, sign-ins and workspaces stay put between tasks. Requires the Hronaut app running on the same computer (free 10-day trial at hronaut.dev); it does not work from cloud tasks.",
+    "developerName": "Hronaut",
+    "category": "Developer Tools",
+    "capabilities": ["Interactive", "Read", "Write"],
+    "websiteURL": "https://hronaut.dev",
+    "supportURL": "https://github.com/hronaut/hronaut/issues",
+    "privacyPolicyURL": "https://hronaut.dev/privacy",
+    "termsOfServiceURL": "https://hronaut.dev/terms",
+    "defaultPrompt": [
+      "Open http://localhost:3000 in Hronaut and report console errors and failed requests.",
+      "Check our signup page in Hronaut at 375 and 1280 pixels wide and list layout problems.",
+      "Audit http://localhost:5173 for accessibility in Hronaut, fix what you find, then audit again."
+    ],
+    "brandColor": "#FF2EE0",
+    "brandColorDark": "#00F5FF",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png"
+  }
+}

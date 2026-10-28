@@ -1,0 +1,18 @@
+{
+  "name": "hronaut-codex-plugin",
+  "private": true,
+  "type": "module",
+  "description": "Hronaut's plugin for Codex: the Hronaut MCP server and the Hronaut skill.",
+  "homepage": "https://hronaut.dev",
+  "license": "SEE LICENSE IN LICENSE",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "sync": "node .github/scripts/sync-from-app.mjs"
+  },
+  "devDependencies": {
+    "vitest": "^5.0.3"
+  }
+}
