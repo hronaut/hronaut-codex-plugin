@@ -120,10 +120,17 @@ describe('the Codex plugin', () => {
     expect((await readFile('CHANGELOG.md', 'utf8')).match(/^## (\S+)/m)?.[1]).toBe(plugin.version)
   })
 
-  it('ships the Hronaut skill and the repository’s license', async () => {
-    // Codex installs only the plugin's folder, so the license is a copy there; the daily sync updates both from Hronaut.
-    expect(await readFile(join(PLUGIN_ROOT, 'skills/hronaut/SKILL.md'), 'utf8')).toMatch(/^---\r?\nname: hronaut\r?\n/)
-    expect(await readFile(join(PLUGIN_ROOT, 'LICENSE'), 'utf8')).toBe(await readFile('LICENSE', 'utf8'))
+  it('ships the Hronaut skill and the repository’s MIT license, unlike the Hronaut app', async () => {
+    const license = await readFile('LICENSE', 'utf8')
+    expect(license).toMatch(/^MIT License\r?\n\r?\nCopyright \(c\) 2026 Hronaut\r?\n/)
+    // Codex installs only the plugin's folder, so the license is a copy there.
+    expect(await readFile(join(PLUGIN_ROOT, 'LICENSE'), 'utf8')).toBe(license)
+    expect((await json<{ license: string }>(join(PLUGIN_ROOT, '.codex-plugin/plugin.json'))).license).toBe('MIT')
+    expect((await json<{ license: string }>('package.json')).license).toBe('MIT')
+    // The daily sync copies the skill from the app, whose copy names the app's license, and marks this copy MIT.
+    const skill = await readFile(join(PLUGIN_ROOT, 'skills/hronaut/SKILL.md'), 'utf8')
+    expect(skill).toMatch(/^---\r?\nname: hronaut\r?\n/)
+    expect(skill).toMatch(/^---\r?\n(?:(?!---)[^\n]*\n)*license: MIT\r?\n/)
   })
 
   it('connects to Hronaut’s local endpoint, with the owner token its headers helper reads', async () => {

@@ -3,6 +3,11 @@
 Each entry is a version of the plugin. Codex installs plugins by the version in
 `plugins/hronaut/.codex-plugin/plugin.json`, so every change that reaches users bumps it and adds an entry here.
 
+## 1.0.2 - 2026-10-28
+
+- The plugin is now open source under the MIT License, including its copy of the Hronaut skill. Hronaut itself, the
+  app the plugin connects to, keeps its Subscription and Trial License.
+
 ## 1.0.1 - 2026-10-28
 
 - Moves to its own repository, hronaut/hronaut-codex-plugin. Add the marketplace with

@@ -1,6 +1,6 @@
 name: Sync from Hronaut
 
-# Keeps the plugin's skill and license the same as in the newest Hronaut release, as a new patch version.
+# Keeps the plugin's skill the same as in the newest Hronaut release, as a new patch version.
 on:
   schedule:
     - cron: '23 6 * * *'
@@ -38,6 +38,6 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add plugins/hronaut LICENSE CHANGELOG.md
-          git commit -m "Release $VERSION with the skill and license from Hronaut $TAG"
+          git add plugins/hronaut CHANGELOG.md
+          git commit -m "Release $VERSION with the skill from Hronaut $TAG"
           git push origin HEAD:main

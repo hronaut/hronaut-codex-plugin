@@ -4,7 +4,7 @@
   "type": "module",
   "description": "Hronaut's plugin for Codex: the Hronaut MCP server and the Hronaut skill.",
   "homepage": "https://hronaut.dev",
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "MIT",
   "engines": {
     "node": ">=22"
   },
