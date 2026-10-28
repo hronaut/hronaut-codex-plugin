@@ -31,4 +31,4 @@ Hronaut runs on your computer, so Codex cloud tasks cannot reach it. See the [pr
 
 ## License
 
-Hronaut and this plugin are source-available under the [Subscription and Trial License](LICENSE). The 10-day trial starts with the first agent tool call, with no credit card required. Ongoing use requires a subscription afterward: $4/month or $24/year per named user (50% off $48).
+This plugin is open source under the [MIT License](LICENSE): you may use, change and share it, including in paid products. Hronaut, the app it connects to, is source-available under the [Subscription and Trial License](https://github.com/hronaut/hronaut/blob/main/LICENSE). The 10-day trial starts with the first agent tool call, with no credit card required. Ongoing use of the app requires a subscription afterward: $4/month or $24/year per named user (50% off $48).

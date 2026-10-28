@@ -1,6 +1,6 @@
 {
   "name": "hronaut",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Connects your coding agent to Hronaut — a visible desktop browser it can drive over MCP. Watch every step, pause and take over, keep logins between sessions. Requires the Hronaut app (free 10-day trial at hronaut.dev).",
   "author": {
     "name": "Hronaut",
@@ -8,7 +8,7 @@
   },
   "homepage": "https://hronaut.dev/codex-browser-mcp",
   "repository": "https://github.com/hronaut/hronaut-codex-plugin",
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "MIT",
   "keywords": ["browser", "mcp", "qa", "testing", "automation", "localhost"],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
