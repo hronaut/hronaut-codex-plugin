@@ -9,8 +9,8 @@ import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 
 const run = promisify(execFile)
 const PLUGIN_ROOT = 'plugins/hronaut'
-const STORE_DESCRIPTION = 'Connects your coding agent to Hronaut — a visible desktop browser it can drive over MCP. '
-  + 'Watch every step, pause and take over, keep logins between sessions. Requires the Hronaut app (free 10-day trial at hronaut.dev).'
+const STORE_DESCRIPTION = 'Give your coding agent its own browser. Keep yours. Connects your agent to Hronaut, a visible desktop browser for '
+  + 'coding agents, with a separate workspace for each project. Requires the Hronaut app (10-day free trial at hronaut.dev).'
 const TOKEN = 'a'.repeat(20) + '-_B9'.repeat(5)
 /** Hronaut's default MCP port, DEFAULT_MCP_PORT in the app; the daily sync checks that it still is. */
 const DEFAULT_MCP_PORT = 47_812

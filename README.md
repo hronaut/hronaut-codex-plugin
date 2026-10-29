@@ -1,7 +1,10 @@
 # Hronaut for Codex
 
-The Codex plugin for [Hronaut](https://hronaut.dev), a visible desktop browser your coding agent drives over MCP. It
-adds Hronaut's MCP server and the Hronaut skill to Codex CLI and Codex in the ChatGPT desktop app. Start Hronaut, then:
+**Give your coding agent its own browser. Keep yours.**
+
+The Codex plugin for [Hronaut](https://hronaut.dev), a visible desktop browser for coding agents, with a separate
+workspace for each project. It adds Hronaut's MCP server and the Hronaut skill to Codex CLI and Codex in the ChatGPT
+desktop app. Start Hronaut, then:
 
 ```bash
 codex plugin marketplace add hronaut/hronaut-codex-plugin

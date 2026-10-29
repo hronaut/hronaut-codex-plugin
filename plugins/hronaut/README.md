@@ -1,6 +1,8 @@
 # Hronaut for Codex
 
-Connects Codex to [Hronaut](https://hronaut.dev) — a visible desktop browser it can drive over MCP. Watch every step, pause and take over, keep logins between sessions. Requires the Hronaut app (free 10-day trial at [hronaut.dev](https://hronaut.dev/download)).
+**Give your coding agent its own browser. Keep yours.**
+
+Connects Codex to [Hronaut](https://hronaut.dev), a visible desktop browser for coding agents, with a separate workspace for each project. Your everyday Chrome stays out of it, and you can pause and take over at any time. Requires the Hronaut app (10-day free trial at [hronaut.dev](https://hronaut.dev/download)).
 
 The plugin adds Hronaut's MCP server and the Hronaut skill, which teaches Codex to work in its own isolated workspace and hand sign-ins and CAPTCHAs to you. It works in Codex CLI and in Codex in the ChatGPT desktop app. The Codex IDE extension doesn't support plugins; there, add Hronaut with `codex mcp add` as the [setup guide](https://hronaut.dev/codex-browser-mcp) shows.
 
