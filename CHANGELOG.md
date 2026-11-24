@@ -3,6 +3,10 @@
 Each entry is a version of the plugin. Codex installs plugins by the version in
 `plugins/hronaut/.codex-plugin/plugin.json`, so every change that reaches users bumps it and adds an entry here.
 
+## 1.0.4 - 2026-11-24
+
+- Updates the Hronaut skill to Hronaut 3.14.35.
+
 ## 1.0.3 - 2026-10-29
 
 - New description in the plugin listing and README: "Give your coding agent its own browser. Keep yours."
