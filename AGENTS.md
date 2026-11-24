@@ -18,7 +18,7 @@ Subscription and Trial License in hronaut/hronaut. Don't copy app code here.
 - The `Sync from Hronaut` workflow runs daily. It copies `skills/hronaut/SKILL.md` from the newest hronaut/hronaut
   release (never from its main branch, which may describe tools not yet released) into the plugin, with
   `license: MIT` in its frontmatter, bumps the patch version when it changed, tests and pushes to main. It fails instead when the app's token format
-  (`TOKEN_PATTERN` in `src/main/mcp-token-store.ts`), default MCP port (`DEFAULT_MCP_PORT` in
+  (`TOKEN_PATTERN` in `src/main/mcp-runtime/mcp-token-store.ts`), default MCP port (`DEFAULT_MCP_PORT` in
   `src/shared/mcp-port.ts`) or package name (the profile folder) no longer match what the headers helper assumes;
   update the helper and tests, then run it by hand. GitHub turns scheduled workflows off after 60 days without
   activity in the repository; turn it back on in Actions.
