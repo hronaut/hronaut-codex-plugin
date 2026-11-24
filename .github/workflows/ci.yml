@@ -26,5 +26,5 @@ jobs:
           cache: npm
       - run: npm ci
       # The end-to-end test installs the plugin with this Codex CLI; it skips when Codex isn't installed.
-      - run: npm install --no-save @openai/codex@0.165.0
+      - run: npm install --no-save @openai/codex@0.172.0
       - run: npm test

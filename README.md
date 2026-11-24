@@ -30,7 +30,7 @@ Hronaut itself in [hronaut/hronaut](https://github.com/hronaut/hronaut); report 
 
 ```bash
 npm ci
-npm install --no-save @openai/codex@0.165.0   # for the end-to-end test
+npm install --no-save @openai/codex@0.172.0   # for the end-to-end test
 npm test
 ```
 

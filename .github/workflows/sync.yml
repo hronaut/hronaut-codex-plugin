@@ -29,7 +29,7 @@ jobs:
       # A push with this workflow's token doesn't start CI, so the tests run here first, with Codex installed for the
       # end-to-end test.
       - if: steps.sync.outputs.changed == 'true'
-        run: npm ci && npm install --no-save @openai/codex@0.165.0 && npm test
+        run: npm ci && npm install --no-save @openai/codex@0.172.0 && npm test
       - if: steps.sync.outputs.changed == 'true'
         env:
           TAG: ${{ steps.sync.outputs.tag }}
