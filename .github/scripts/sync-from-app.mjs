@@ -22,7 +22,7 @@ const file = (path) => get(`https://raw.githubusercontent.com/${APP}/${tag}/${pa
 
 // The helper and tests hard-code these; a change in the app needs a change here first.
 const assumptions = [
-  ['src/main/mcp-token-store.ts', (text) => text.includes('const TOKEN_PATTERN = /^[A-Za-z0-9_-]{32,}$/'), 'tokens match /^[A-Za-z0-9_-]{32,}$/'],
+  ['src/main/mcp-runtime/mcp-token-store.ts', (text) => text.includes('const TOKEN_PATTERN = /^[A-Za-z0-9_-]{32,}$/'), 'tokens match /^[A-Za-z0-9_-]{32,}$/'],
   ['src/shared/mcp-port.ts', (text) => text.includes('export const DEFAULT_MCP_PORT = 47_812'), 'the default MCP port is 47812'],
   ['package.json', (text) => JSON.parse(text).name === 'hronaut', 'the package name, and so the profile folder, is hronaut']
 ]
